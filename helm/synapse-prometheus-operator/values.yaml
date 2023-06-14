@@ -44,7 +44,7 @@ kube-prometheus-stack:
 
     prometheusSpec:
       replicas: 1
-      retention: 15d
+      retention: 31d
 
       # resources: {}
 
@@ -58,7 +58,7 @@ kube-prometheus-stack:
             accessModes: ["ReadWriteOnce"]
             resources:
               requests:
-                storage: 512Gi
+                storage: 2048Gi
 
       ## Synapse Connector
       volumes:
@@ -117,4 +117,4 @@ kube-prometheus-stack:
       storageClassName: default
       accessModes:
         - ReadWriteOnce
-      size: 10Gi
+      size: 50Gi
